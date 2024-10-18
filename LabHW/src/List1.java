@@ -24,8 +24,9 @@ public class List1 {
         return contacts;
     }
 
-    
+    	// Method to sort the list of contacts alphabetically by name
     public static void selectionSort(List<Contact> contacts) {
+    	// Go through each contact
         for (int i = 0; i < contacts.size() - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < contacts.size(); j++) {
@@ -37,8 +38,9 @@ public class List1 {
         }
     }
 
-   
+    	// Method to search for a contact by name 
     public static Contact sequentialSearch(List<Contact> contacts, String name) {
+    	// Go through each contact one by one
         for (Contact contact : contacts) {
             if (contact.getName().equalsIgnoreCase(name)) {
                 return contact;
@@ -76,6 +78,7 @@ public class List1 {
     public static void printContactsInReverseOrder(List<Contact> contacts) {
         System.out.println("Contact List:");
         for (int i = contacts.size() - 1; i >= 0; i--) {
+        	// Start from the last contact and go backwards
             Contact contact = contacts.get(i);
             System.out.println("Contact [" + contact.getName() + ": " + contact.getPhoneNumber() + "]");
         }
