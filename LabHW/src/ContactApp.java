@@ -25,8 +25,11 @@ public class ContactApp {
             }
         } while (!fileLoaded);
 
-        
+        // Show the menu and allow the user to select options until they choose to exit
         while (true) {
+        	
+        	// Display the menu options
+        	
             System.out.println("Contact List");
             System.out.println("------------");
             System.out.println("Select one of the following operations:");
@@ -35,12 +38,14 @@ public class ContactApp {
             System.out.println("3. Search contacts");
             System.out.println("4. Exit");
 
+            // Get the user's menu choice
             System.out.print("Enter your selection here: ");
             int choice = scanner.nextInt();
             scanner.nextLine();  
 
             switch (choice) {
-                case 1:
+                case 1:              // Option 1: Display contacts in alphabetical order
+
                     if (!sorted) {
                         List1.selectionSort(contacts);
                         sorted = true;
