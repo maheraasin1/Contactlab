@@ -52,14 +52,14 @@ public class ContactApp {
                     }
                     List1.printContactsSequentially(contacts);
                     break;
-                case 2:
+                case 2: // Display contacts in reverse alphabetical order
                     if (!sorted) {
                         List1.selectionSort(contacts);
                         sorted = true;
                     }
                     List1.printContactsInReverseOrder(contacts);
                     break;
-                case 3:
+                case 3: // Option 3: Search for a contact by name
                     System.out.print("Enter contact name: ");
                     String name = scanner.nextLine().trim();  // Trim any extra spaces
                     Contact foundContact = (sorted) ? List1.binarySearch(contacts, name)
@@ -71,6 +71,7 @@ public class ContactApp {
                     }
                     break;
                 case 4:
+                    // Option 4: Exit the program
                     System.out.println("Good-bye!");
                     return;
                 default:
