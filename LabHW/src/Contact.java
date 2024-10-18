@@ -1,3 +1,8 @@
+//Mahera Asin 
+//October 18, 2024 
+// Creating a program to organize contacct lists 
+
+
 public class Contact implements Comparable<Contact> {
     private String name;
     private String phoneNumber;
