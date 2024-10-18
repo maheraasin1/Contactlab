@@ -5,26 +5,26 @@ import java.util.*;
 
 public class List1 {
 
-    // Method to read contacts from file into a list
+   
     public static List<Contact> readContactsFromFile(String fileName) {
         List<Contact> contacts = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] data = line.split(" ");
-                if (data.length >= 3) {  // Ensure correct format (at least 3 elements)
+                if (data.length >= 3) {  
                     String name = data[0] + " " + data[1];
                     String phoneNumber = data[2];
                     contacts.add(new Contact(name, phoneNumber));
                 }
             }
         } catch (IOException e) {
-            // Handle exception silently, letting the main method show the error
+            
         }
         return contacts;
     }
 
-    // Method to sort contacts alphabetically by name using selection sort
+    
     public static void selectionSort(List<Contact> contacts) {
         for (int i = 0; i < contacts.size() - 1; i++) {
             int minIndex = i;
@@ -37,17 +37,17 @@ public class List1 {
         }
     }
 
-    // Sequential search method for unsorted list
+   
     public static Contact sequentialSearch(List<Contact> contacts, String name) {
         for (Contact contact : contacts) {
             if (contact.getName().equalsIgnoreCase(name)) {
                 return contact;
             }
         }
-        return null; // Return null if not found
+        return null; 
     }
 
-    // Binary search method for sorted list
+    
     public static Contact binarySearch(List<Contact> contacts, String name) {
         int left = 0, right = contacts.size() - 1;
         while (left <= right) {
@@ -61,10 +61,10 @@ public class List1 {
                 right = mid - 1;
             }
         }
-        return null; // Return null if not found
+        return null; 
     }
 
-    // Print contacts in alphabetical order
+    
     public static void printContactsSequentially(List<Contact> contacts) {
         System.out.println("Contact List:");
         for (Contact contact : contacts) {
@@ -72,7 +72,7 @@ public class List1 {
         }
     }
 
-    // Print contacts in reverse alphabetical order
+   
     public static void printContactsInReverseOrder(List<Contact> contacts) {
         System.out.println("Contact List:");
         for (int i = contacts.size() - 1; i >= 0; i--) {

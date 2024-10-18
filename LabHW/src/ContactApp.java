@@ -7,17 +7,17 @@ public class ContactApp {
         List<Contact> contacts = new ArrayList<>();
         boolean sorted = false;
 
-        // Keep asking for the file name until the file is found
+       
         String fileName;
-        boolean fileLoaded = false;  // Boolean to track if file is successfully loaded
+        boolean fileLoaded = false; 
         do {
             System.out.print("Enter the file name: ");
             fileName = scanner.nextLine();
 
-            // Read contacts from the file
+           
             contacts = List1.readContactsFromFile(fileName);
 
-            // Check if file was found and contacts loaded
+            
             if (contacts.isEmpty()) {
                 System.out.println("File not found. Please try again.");
             } else {
@@ -25,7 +25,7 @@ public class ContactApp {
             }
         } while (!fileLoaded);
 
-        // Continue with the rest of the program after the file is successfully loaded
+        
         while (true) {
             System.out.println("Contact List");
             System.out.println("------------");
@@ -37,7 +37,7 @@ public class ContactApp {
 
             System.out.print("Enter your selection here: ");
             int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
+            scanner.nextLine();  
 
             switch (choice) {
                 case 1:

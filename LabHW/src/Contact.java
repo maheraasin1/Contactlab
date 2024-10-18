@@ -25,13 +25,12 @@ public class Contact implements Comparable<Contact> {
         this.phoneNumber = phoneNumber;
     }
 
-    // Override toString to display contacts
+    
     @Override
     public String toString() {
         return name + " " + phoneNumber;
     }
 
-    // Implement compareTo to sort contacts by name
     @Override
     public int compareTo(Contact other) {
         return this.name.compareToIgnoreCase(other.name);
