@@ -3,18 +3,18 @@ import java.util.*;
 public class ContactApp {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);  // Used to get input from the user
         List<Contact> contacts = new ArrayList<>();
         boolean sorted = false;
 
-       
+        // Keep asking for the file name until the file is found
         String fileName;
         boolean fileLoaded = false; 
         do {
             System.out.print("Enter the file name: ");
             fileName = scanner.nextLine();
 
-           
+            // Read contacts from the file
             contacts = List1.readContactsFromFile(fileName);
 
             
